@@ -4,7 +4,6 @@
 // Run this file with node CRUDBookSQLite.js
 // Test with Postman
 require("dotenv").config();
-
 const express = require('express');
 const sqlite3 = require('sqlite3');
 const app = express();
