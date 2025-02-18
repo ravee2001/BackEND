@@ -10,13 +10,15 @@ const app = express();
 
 // parse incoming requests
 app.use(express.json());
-
+const dbUrl = 'postgres://webadmin:QPHezd28141@node71453-node267sirin.proen.app.ruk-com.cloud:11720/Books'
+const sequelize = new Sequelize(dbUrl);
 // create a connection to the database เชื่อต่อดาต้าเบสเรา
-const sequelize = new Sequelize('database', 'username', 'password', {
-    host: 'localhost',
-    dialect: 'sqlite',
-    storage: './Database/Books.sqlite'
-});
+// const sequelize = new Sequelize('database', 'username', 'password', {
+//     host: 'localhost',
+//     dialect: 'sqlite',
+//     storage: './Database/Books.sqlite'
+// });
+
 
 // define the Book model
 const Book = sequelize.define('book', {
